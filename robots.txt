@@ -1,0 +1,7 @@
+# robots.txt for HTML Banking System
+# https://html-banking-system.roboticela.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://html-banking-system.roboticela.com/sitemap.xml

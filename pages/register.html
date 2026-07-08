@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for a new HTML Banking System online banking account.">
+  <title>Registration — HTML Banking System</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <h1>HTML Banking System</h1>
+    <p>New Account Registration</p>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="../index.html">Dashboard</a></li>
+        <li><a href="accounts.html">Accounts</a></li>
+        <li><a href="transactions.html">Transactions</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="credit-cards.html">Credit Cards</a></li>
+        <li><a href="transfers.html">Transfers</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html" aria-current="page">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="register-heading">
+      <h2 id="register-heading">Create Your Online Banking Account</h2>
+      <p>Complete the form below to register for secure online access.</p>
+
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <p>
+            <label for="first-name">First Name</label><br>
+            <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+          </p>
+          <p>
+            <label for="last-name">Last Name</label><br>
+            <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+          </p>
+          <p>
+            <label for="email">Email Address</label><br>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="your.email@example.com">
+          </p>
+          <p>
+            <label for="phone">Phone Number</label><br>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="+1 (555) 123-4567">
+          </p>
+          <p>
+            <label for="dob">Date of Birth</label><br>
+            <input type="date" id="dob" name="dob" required>
+          </p>
+          <p>
+            <label for="ssn-last4">Last Four Digits of SSN</label><br>
+            <input type="text" id="ssn-last4" name="ssn-last4" pattern="[0-9]{4}" maxlength="4" required placeholder="1234">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Home Address</legend>
+          <p>
+            <label for="street">Street Address</label><br>
+            <input type="text" id="street" name="street" autocomplete="street-address" required>
+          </p>
+          <p>
+            <label for="city">City</label><br>
+            <input type="text" id="city" name="city" autocomplete="address-level2" required>
+          </p>
+          <p>
+            <label for="state">State / Province</label><br>
+            <input type="text" id="state" name="state" autocomplete="address-level1" required>
+          </p>
+          <p>
+            <label for="zip">ZIP / Postal Code</label><br>
+            <input type="text" id="zip" name="zip" autocomplete="postal-code" required>
+          </p>
+          <p>
+            <label for="country">Country</label><br>
+            <select id="country" name="country" required>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+              <option value="GB">United Kingdom</option>
+              <option value="PK">Pakistan</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Details</legend>
+          <p>
+            <label for="account-number-reg">Existing Account Number (if applicable)</label><br>
+            <input type="text" id="account-number-reg" name="account-number" placeholder="Leave blank for new customers">
+          </p>
+          <p>
+            <label for="account-type-reg">Desired Account Type</label><br>
+            <select id="account-type-reg" name="account-type" required>
+              <option value="">Select account type</option>
+              <option value="checking">Checking</option>
+              <option value="savings">Savings</option>
+              <option value="both">Checking and Savings</option>
+              <option value="business">Business</option>
+            </select>
+          </p>
+          <p>
+            <label for="initial-deposit-reg">Initial Deposit</label><br>
+            <input type="number" id="initial-deposit-reg" name="initial-deposit" min="25" step="0.01" value="100.00">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Login Credentials</legend>
+          <p>
+            <label for="reg-username">Choose Username</label><br>
+            <input type="text" id="reg-username" name="username" autocomplete="username" required minlength="6" maxlength="32">
+          </p>
+          <p>
+            <label for="reg-password">Create Password</label><br>
+            <input type="password" id="reg-password" name="password" autocomplete="new-password" required minlength="12" placeholder="Minimum 12 characters">
+          </p>
+          <p>
+            <label for="reg-password-confirm">Confirm Password</label><br>
+            <input type="password" id="reg-password-confirm" name="password-confirm" autocomplete="new-password" required minlength="12">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Agreements</legend>
+          <p>
+            <input type="checkbox" id="terms-reg" name="terms" required>
+            <label for="terms-reg">I agree to the Terms of Service and Privacy Policy</label>
+          </p>
+          <p>
+            <input type="checkbox" id="esign" name="esign" required>
+            <label for="esign">I consent to electronic delivery of statements and disclosures</label>
+          </p>
+          <p>
+            <input type="checkbox" id="marketing" name="marketing">
+            <label for="marketing">Send me promotional offers and product updates (optional)</label>
+          </p>
+          <p>
+            <button type="submit">Create Account</button>
+            <button type="reset">Clear All Fields</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <aside aria-labelledby="existing-heading">
+      <h2 id="existing-heading">Already Have an Account?</h2>
+      <p><a href="login.html">Sign in to your existing account</a></p>
+    </aside>
+  </main>
+
+  <footer>
+    <p><small>HTML Banking System &copy; <time datetime="2026">2026</time> Muhammad Shawsawar</small></p>
+    <address>
+      Contact: <a href="mailto:muhammad@roboticela.com">muhammad@roboticela.com</a>
+    </address>
+    <p><a href="../index.html">Return to Dashboard</a></p>
+  </footer>
+</body>
+</html>

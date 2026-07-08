@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="HTML Banking System logo">
+  <title>HTML Banking System</title>
+  <rect x="8" y="52" width="112" height="56" rx="6" fill="#1a365d"/>
+  <polygon points="64,16 112,48 16,48" fill="#2b6cb0"/>
+  <rect x="28" y="68" width="16" height="32" fill="#bee3f8"/>
+  <rect x="56" y="68" width="16" height="32" fill="#bee3f8"/>
+  <rect x="84" y="68" width="16" height="32" fill="#bee3f8"/>
+  <circle cx="64" cy="40" r="8" fill="#f6ad55"/>
+  <path d="M48 88h32" stroke="#1a365d" stroke-width="3" stroke-linecap="round"/>
+</svg>

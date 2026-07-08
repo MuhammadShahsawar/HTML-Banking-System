@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View and manage your bank accounts — checking, savings, and business accounts.">
+  <title>Accounts — HTML Banking System</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <h1>HTML Banking System</h1>
+    <p>Account Management</p>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="../index.html">Dashboard</a></li>
+        <li><a href="accounts.html" aria-current="page">Accounts</a></li>
+        <li><a href="transactions.html">Transactions</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="credit-cards.html">Credit Cards</a></li>
+        <li><a href="transfers.html">Transfers</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="accounts-heading">
+      <h2 id="accounts-heading">Your Accounts</h2>
+      <p>Review balances, account details, and status for all linked accounts.</p>
+
+      <article aria-labelledby="checking-heading">
+        <h3 id="checking-heading">Primary Checking Account</h3>
+        <dl>
+          <dt>Account Type</dt>
+          <dd>Personal Checking</dd>
+          <dt>Account Number</dt>
+          <dd><data value="****4821">****4821</data></dd>
+          <dt>Routing Number</dt>
+          <dd><data value="021000021">021000021</data></dd>
+          <dt>Available Balance</dt>
+          <dd><data value="12450.75">$12,450.75</data></dd>
+          <dt>Pending Transactions</dt>
+          <dd><data value="230.00">$230.00</data></dd>
+          <dt>Status</dt>
+          <dd>Active</dd>
+          <dt>Opened</dt>
+          <dd><time datetime="2019-03-15">March 15, 2019</time></dd>
+        </dl>
+      </article>
+
+      <article aria-labelledby="savings-heading">
+        <h3 id="savings-heading">High-Yield Savings Account</h3>
+        <dl>
+          <dt>Account Type</dt>
+          <dd>Savings</dd>
+          <dt>Account Number</dt>
+          <dd><data value="****7392">****7392</data></dd>
+          <dt>Routing Number</dt>
+          <dd><data value="021000021">021000021</data></dd>
+          <dt>Available Balance</dt>
+          <dd><data value="45200.00">$45,200.00</data></dd>
+          <dt>Interest Rate (<abbr title="Annual Percentage Yield">APY</abbr>)</dt>
+          <dd><data value="4.25">4.25%</data></dd>
+          <dt>Status</dt>
+          <dd>Active</dd>
+          <dt>Opened</dt>
+          <dd><time datetime="2020-08-22">August 22, 2020</time></dd>
+        </dl>
+      </article>
+
+      <article aria-labelledby="business-heading">
+        <h3 id="business-heading">Business Checking Account</h3>
+        <dl>
+          <dt>Account Type</dt>
+          <dd>Business Checking</dd>
+          <dt>Account Number</dt>
+          <dd><data value="****1056">****1056</data></dd>
+          <dt>Routing Number</dt>
+          <dd><data value="021000021">021000021</data></dd>
+          <dt>Available Balance</dt>
+          <dd><data value="28750.30">$28,750.30</data></dd>
+          <dt>Monthly Transaction Limit</dt>
+          <dd><data value="500">500</data></dd>
+          <dt>Status</dt>
+          <dd>Active</dd>
+          <dt>Opened</dt>
+          <dd><time datetime="2022-01-10">January 10, 2022</time></dd>
+        </dl>
+      </article>
+    </section>
+
+    <section aria-labelledby="accounts-table-heading">
+      <h2 id="accounts-table-heading">All Accounts Overview</h2>
+      <table>
+        <caption>Complete list of accounts linked to your profile</caption>
+        <thead>
+          <tr>
+            <th scope="col">Account Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Number</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Last Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Primary Checking</th>
+            <td>Checking</td>
+            <td>****4821</td>
+            <td>$12,450.75</td>
+            <td><time datetime="2026-07-08">Jul 8, 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">High-Yield Savings</th>
+            <td>Savings</td>
+            <td>****7392</td>
+            <td>$45,200.00</td>
+            <td><time datetime="2026-07-04">Jul 4, 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Business Checking</th>
+            <td>Business</td>
+            <td>****1056</td>
+            <td>$28,750.30</td>
+            <td><time datetime="2026-07-03">Jul 3, 2026</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="open-account-heading">
+      <h2 id="open-account-heading">Open a New Account</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Account Application</legend>
+          <p>
+            <label for="account-type">Account Type</label><br>
+            <select id="account-type" name="account-type" required>
+              <option value="">Select an account type</option>
+              <option value="checking">Checking</option>
+              <option value="savings">Savings</option>
+              <option value="business">Business Checking</option>
+              <option value="money-market">Money Market</option>
+            </select>
+          </p>
+          <p>
+            <label for="initial-deposit">Initial Deposit Amount</label><br>
+            <input type="number" id="initial-deposit" name="initial-deposit" min="25" step="0.01" placeholder="100.00" required>
+          </p>
+          <p>
+            <label for="funding-account">Fund From Existing Account</label><br>
+            <select id="funding-account" name="funding-account">
+              <option value="4821">Checking ****4821</option>
+              <option value="7392">Savings ****7392</option>
+              <option value="1056">Business ****1056</option>
+            </select>
+          </p>
+          <p>
+            <input type="checkbox" id="terms-accounts" name="terms" required>
+            <label for="terms-accounts">I agree to the account terms and conditions</label>
+          </p>
+          <p>
+            <button type="submit">Submit Application</button>
+            <button type="reset">Clear Form</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>HTML Banking System &copy; <time datetime="2026">2026</time> Muhammad Shawsawar</small></p>
+    <address>
+      Contact: <a href="mailto:muhammad@roboticela.com">muhammad@roboticela.com</a>
+    </address>
+    <p><a href="../index.html">Return to Dashboard</a></p>
+  </footer>
+</body>
+</html>

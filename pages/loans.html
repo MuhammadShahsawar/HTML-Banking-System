@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View loan details, payment schedules, and apply for personal, auto, or home loans.">
+  <title>Loans — HTML Banking System</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <h1>HTML Banking System</h1>
+    <p>Loan Management</p>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="../index.html">Dashboard</a></li>
+        <li><a href="accounts.html">Accounts</a></li>
+        <li><a href="transactions.html">Transactions</a></li>
+        <li><a href="loans.html" aria-current="page">Loans</a></li>
+        <li><a href="credit-cards.html">Credit Cards</a></li>
+        <li><a href="transfers.html">Transfers</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="loans-heading">
+      <h2 id="loans-heading">Your Loans</h2>
+      <p>Review active loans, payment schedules, and remaining balances.</p>
+
+      <article aria-labelledby="auto-loan-heading">
+        <h3 id="auto-loan-heading">Auto Loan</h3>
+        <dl>
+          <dt>Loan ID</dt>
+          <dd><data value="LN-2023-8841">LN-2023-8841</data></dd>
+          <dt>Original Amount</dt>
+          <dd><data value="28000.00">$28,000.00</data></dd>
+          <dt>Outstanding Balance</dt>
+          <dd><data value="18450.22">$18,450.22</data></dd>
+          <dt>Interest Rate</dt>
+          <dd><data value="5.49">5.49% <abbr title="Annual Percentage Rate">APR</abbr></data></dd>
+          <dt>Monthly Payment</dt>
+          <dd><data value="523.45">$523.45</data></dd>
+          <dt>Next Payment Due</dt>
+          <dd><time datetime="2026-07-15">July 15, 2026</time></dd>
+          <dt>Remaining Term</dt>
+          <dd>36 months</dd>
+          <dt>Status</dt>
+          <dd>Current</dd>
+        </dl>
+      </article>
+
+      <article aria-labelledby="personal-loan-heading">
+        <h3 id="personal-loan-heading">Personal Loan</h3>
+        <dl>
+          <dt>Loan ID</dt>
+          <dd><data value="LN-2024-2156">LN-2024-2156</data></dd>
+          <dt>Original Amount</dt>
+          <dd><data value="10000.00">$10,000.00</data></dd>
+          <dt>Outstanding Balance</dt>
+          <dd><data value="6240.80">$6,240.80</data></dd>
+          <dt>Interest Rate</dt>
+          <dd><data value="7.25">7.25% APR</data></dd>
+          <dt>Monthly Payment</dt>
+          <dd><data value="312.18">$312.18</data></dd>
+          <dt>Next Payment Due</dt>
+          <dd><time datetime="2026-07-20">July 20, 2026</time></dd>
+          <dt>Remaining Term</dt>
+          <dd>22 months</dd>
+          <dt>Status</dt>
+          <dd>Current</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Upcoming Payment Schedule</h2>
+      <table>
+        <caption>Scheduled loan payments for the next six months</caption>
+        <thead>
+          <tr>
+            <th scope="col">Due Date</th>
+            <th scope="col">Loan</th>
+            <th scope="col">Principal</th>
+            <th scope="col">Interest</th>
+            <th scope="col">Total Payment</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><time datetime="2026-07-15">Jul 15, 2026</time></td>
+            <td>Auto Loan</td>
+            <td>$398.12</td>
+            <td>$125.33</td>
+            <td>$523.45</td>
+            <td>Scheduled</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-20">Jul 20, 2026</time></td>
+            <td>Personal Loan</td>
+            <td>$252.48</td>
+            <td>$59.70</td>
+            <td>$312.18</td>
+            <td>Scheduled</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-08-15">Aug 15, 2026</time></td>
+            <td>Auto Loan</td>
+            <td>$400.94</td>
+            <td>$122.51</td>
+            <td>$523.45</td>
+            <td>Scheduled</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-08-20">Aug 20, 2026</time></td>
+            <td>Personal Loan</td>
+            <td>$254.01</td>
+            <td>$58.17</td>
+            <td>$312.18</td>
+            <td>Scheduled</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-09-15">Sep 15, 2026</time></td>
+            <td>Auto Loan</td>
+            <td>$403.78</td>
+            <td>$119.67</td>
+            <td>$523.45</td>
+            <td>Scheduled</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-09-20">Sep 20, 2026</time></td>
+            <td>Personal Loan</td>
+            <td>$255.54</td>
+            <td>$56.64</td>
+            <td>$312.18</td>
+            <td>Scheduled</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="apply-loan-heading">
+      <h2 id="apply-loan-heading">Apply for a New Loan</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Loan Application</legend>
+          <p>
+            <label for="loan-type">Loan Type</label><br>
+            <select id="loan-type" name="loan-type" required>
+              <option value="">Select loan type</option>
+              <option value="personal">Personal Loan</option>
+              <option value="auto">Auto Loan</option>
+              <option value="home">Home Mortgage</option>
+              <option value="student">Student Loan Refinance</option>
+              <option value="business">Small Business Loan</option>
+            </select>
+          </p>
+          <p>
+            <label for="loan-amount">Requested Amount</label><br>
+            <input type="number" id="loan-amount" name="amount" min="1000" max="500000" step="100" placeholder="25000" required>
+          </p>
+          <p>
+            <label for="loan-term">Loan Term (months)</label><br>
+            <input type="number" id="loan-term" name="term" min="12" max="360" step="12" value="60" required>
+          </p>
+          <p>
+            <label for="loan-purpose">Purpose of Loan</label><br>
+            <textarea id="loan-purpose" name="purpose" rows="4" cols="50" placeholder="Describe how you plan to use the funds" required></textarea>
+          </p>
+          <p>
+            <label for="annual-income">Annual Income</label><br>
+            <input type="number" id="annual-income" name="income" min="0" step="1000" placeholder="75000" required>
+          </p>
+          <p>
+            <label for="employment-status">Employment Status</label><br>
+            <select id="employment-status" name="employment" required>
+              <option value="employed">Employed Full-Time</option>
+              <option value="part-time">Employed Part-Time</option>
+              <option value="self-employed">Self-Employed</option>
+              <option value="retired">Retired</option>
+            </select>
+          </p>
+          <p>
+            <input type="checkbox" id="loan-terms" name="terms" required>
+            <label for="loan-terms">I authorize a credit check and agree to the loan terms</label>
+          </p>
+          <p>
+            <button type="submit">Submit Loan Application</button>
+            <button type="reset">Clear Form</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <section aria-labelledby="loan-rates-heading">
+      <h2 id="loan-rates-heading">Current Loan Rates</h2>
+      <table>
+        <caption>Representative annual percentage rates as of <time datetime="2026-07-08">July 8, 2026</time></caption>
+        <thead>
+          <tr>
+            <th scope="col">Loan Type</th>
+            <th scope="col">Rate Range</th>
+            <th scope="col">Term</th>
+            <th scope="col">Max Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Personal Loan</th>
+            <td>6.99% – 18.99% APR</td>
+            <td>12 – 84 months</td>
+            <td>$50,000</td>
+          </tr>
+          <tr>
+            <th scope="row">Auto Loan</th>
+            <td>4.49% – 9.99% APR</td>
+            <td>24 – 72 months</td>
+            <td>$75,000</td>
+          </tr>
+          <tr>
+            <th scope="row">Home Mortgage</th>
+            <td>5.75% – 7.25% APR</td>
+            <td>120 – 360 months</td>
+            <td>$1,000,000</td>
+          </tr>
+          <tr>
+            <th scope="row">Small Business</th>
+            <td>7.50% – 14.50% APR</td>
+            <td>12 – 120 months</td>
+            <td>$250,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>HTML Banking System &copy; <time datetime="2026">2026</time> Muhammad Shawsawar</small></p>
+    <address>
+      Contact: <a href="mailto:muhammad@roboticela.com">muhammad@roboticela.com</a>
+    </address>
+    <p><a href="../index.html">Return to Dashboard</a></p>
+  </footer>
+</body>
+</html>

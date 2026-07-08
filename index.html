@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Banking System — a semantic HTML5-only banking interface for accounts, transactions, loans, and more.">
+  <meta name="author" content="Muhammad Shawsawar">
+  <meta name="keywords" content="banking, HTML5, semantic HTML, accounts, transactions, loans">
+  <title>HTML Banking System — Dashboard</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <h1>HTML Banking System</h1>
+    <p>Secure banking interface built with semantic HTML5 only</p>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Dashboard</a></li>
+        <li><a href="pages/accounts.html">Accounts</a></li>
+        <li><a href="pages/transactions.html">Transactions</a></li>
+        <li><a href="pages/loans.html">Loans</a></li>
+        <li><a href="pages/credit-cards.html">Credit Cards</a></li>
+        <li><a href="pages/transfers.html">Transfers</a></li>
+        <li><a href="pages/login.html">Login</a></li>
+        <li><a href="pages/register.html">Registration</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Welcome to Your Dashboard</h2>
+      <p>
+        Manage your finances with a clean, accessible banking interface powered entirely by
+        <abbr title="HyperText Markup Language">HTML</abbr>5. No stylesheets, no scripts — just
+        semantic markup.
+      </p>
+    </section>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Account Summary</h2>
+      <table>
+        <caption>Overview of your primary accounts as of <time datetime="2026-07-08">July 8, 2026</time></caption>
+        <thead>
+          <tr>
+            <th scope="col">Account</th>
+            <th scope="col">Type</th>
+            <th scope="col">Account Number</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Primary Checking</th>
+            <td>Checking</td>
+            <td><data value="****4821">****4821</data></td>
+            <td><data value="12450.75">$12,450.75</data></td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <th scope="row">High-Yield Savings</th>
+            <td>Savings</td>
+            <td><data value="****7392">****7392</data></td>
+            <td><data value="45200.00">$45,200.00</data></td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <th scope="row">Business Account</th>
+            <td>Business Checking</td>
+            <td><data value="****1056">****1056</data></td>
+            <td><data value="28750.30">$28,750.30</data></td>
+            <td>Active</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="3">Total Balance</th>
+            <td colspan="2"><strong><data value="86401.05">$86,401.05</data></strong></td>
+          </tr>
+        </tfoot>
+      </table>
+      <p><a href="pages/accounts.html">View all accounts</a></p>
+    </section>
+
+    <section aria-labelledby="recent-heading">
+      <h2 id="recent-heading">Recent Transactions</h2>
+      <table>
+        <caption>Last five transactions across all accounts</caption>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Account</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><time datetime="2026-07-08">Jul 8, 2026</time></td>
+            <td>Direct Deposit — Acme Corp</td>
+            <td>Income</td>
+            <td><data value="3500.00">+$3,500.00</data></td>
+            <td>Checking ****4821</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-07">Jul 7, 2026</time></td>
+            <td>Electric Utility Payment</td>
+            <td>Utilities</td>
+            <td><data value="-142.18">−$142.18</data></td>
+            <td>Checking ****4821</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-06">Jul 6, 2026</time></td>
+            <td>Transfer to Savings</td>
+            <td>Transfer</td>
+            <td><data value="-1000.00">−$1,000.00</data></td>
+            <td>Checking ****4821</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-05">Jul 5, 2026</time></td>
+            <td>Grocery Market</td>
+            <td>Food</td>
+            <td><data value="-87.43">−$87.43</data></td>
+            <td>Checking ****4821</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-04">Jul 4, 2026</time></td>
+            <td>Interest Credit</td>
+            <td>Interest</td>
+            <td><data value="18.92">+$18.92</data></td>
+            <td>Savings ****7392</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a href="pages/transactions.html">View full transaction history</a></p>
+    </section>
+
+    <section aria-labelledby="quick-actions-heading">
+      <h2 id="quick-actions-heading">Quick Actions</h2>
+      <nav aria-label="Quick actions">
+        <ul>
+          <li><a href="pages/transfers.html">Make a Transfer</a></li>
+          <li><a href="pages/loans.html">Apply for a Loan</a></li>
+          <li><a href="pages/credit-cards.html">Manage Credit Cards</a></li>
+          <li><a href="pages/contact.html">Contact Support</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <aside aria-labelledby="announcements-heading">
+      <h2 id="announcements-heading">Announcements</h2>
+      <article>
+        <h3>Enhanced Security Notice</h3>
+        <p>
+          We recommend reviewing your account activity regularly. Visit
+          <a href="pages/login.html">Login</a> to access your secure session.
+        </p>
+        <p><time datetime="2026-07-01">Posted July 1, 2026</time></p>
+      </article>
+      <article>
+        <h3>New Savings Rate Available</h3>
+        <p>
+          Our high-yield savings account now offers competitive annual percentage yield.
+          <a href="pages/accounts.html">Learn more about accounts</a>.
+        </p>
+        <p><time datetime="2026-06-15">Posted June 15, 2026</time></p>
+      </article>
+    </aside>
+  </main>
+
+  <footer>
+    <p><small>HTML Banking System &copy; <time datetime="2026">2026</time> Muhammad Shawsawar</small></p>
+    <address>
+      Contact: <a href="mailto:muhammad@roboticela.com">muhammad@roboticela.com</a><br>
+      Website: <a href="https://html-banking-system.roboticela.com">html-banking-system.roboticela.com</a>
+    </address>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/login.html">Login</a></li>
+        <li><a href="pages/register.html">Register</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

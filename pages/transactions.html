@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View your complete transaction history across all bank accounts.">
+  <title>Transactions — HTML Banking System</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <h1>HTML Banking System</h1>
+    <p>Transaction History</p>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="../index.html">Dashboard</a></li>
+        <li><a href="accounts.html">Accounts</a></li>
+        <li><a href="transactions.html" aria-current="page">Transactions</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="credit-cards.html">Credit Cards</a></li>
+        <li><a href="transfers.html">Transfers</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="transactions-heading">
+      <h2 id="transactions-heading">Transaction History</h2>
+      <p>Browse, filter, and review all account activity.</p>
+
+      <form action="#" method="get" aria-label="Transaction filters">
+        <fieldset>
+          <legend>Filter Transactions</legend>
+          <p>
+            <label for="filter-account">Account</label><br>
+            <select id="filter-account" name="account">
+              <option value="all">All Accounts</option>
+              <option value="4821">Checking ****4821</option>
+              <option value="7392">Savings ****7392</option>
+              <option value="1056">Business ****1056</option>
+            </select>
+          </p>
+          <p>
+            <label for="filter-from">From Date</label><br>
+            <input type="date" id="filter-from" name="from" value="2026-06-01">
+          </p>
+          <p>
+            <label for="filter-to">To Date</label><br>
+            <input type="date" id="filter-to" name="to" value="2026-07-08">
+          </p>
+          <p>
+            <label for="filter-category">Category</label><br>
+            <select id="filter-category" name="category">
+              <option value="all">All Categories</option>
+              <option value="income">Income</option>
+              <option value="utilities">Utilities</option>
+              <option value="food">Food</option>
+              <option value="transfer">Transfer</option>
+              <option value="interest">Interest</option>
+              <option value="shopping">Shopping</option>
+            </select>
+          </p>
+          <p>
+            <label for="filter-type">Transaction Type</label><br>
+            <select id="filter-type" name="type">
+              <option value="all">All Types</option>
+              <option value="credit">Credits (Deposits)</option>
+              <option value="debit">Debits (Withdrawals)</option>
+            </select>
+          </p>
+          <p>
+            <button type="submit">Apply Filters</button>
+            <button type="reset">Reset Filters</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <section aria-labelledby="history-heading">
+      <h2 id="history-heading">All Transactions</h2>
+      <table>
+        <caption>Transaction records from <time datetime="2026-06-01">June 1</time> to <time datetime="2026-07-08">July 8, 2026</time></caption>
+        <thead>
+          <tr>
+            <th scope="col">Transaction ID</th>
+            <th scope="col">Date</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Type</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Balance After</th>
+            <th scope="col">Account</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><data value="TXN-20260708-001">TXN-20260708-001</data></td>
+            <td><time datetime="2026-07-08T09:15:00">Jul 8, 2026 9:15 AM</time></td>
+            <td>Direct Deposit — Acme Corp</td>
+            <td>Income</td>
+            <td>Credit</td>
+            <td>+$3,500.00</td>
+            <td>$12,450.75</td>
+            <td>****4821</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260707-002">TXN-20260707-002</data></td>
+            <td><time datetime="2026-07-07T14:30:00">Jul 7, 2026 2:30 PM</time></td>
+            <td>Electric Utility Payment</td>
+            <td>Utilities</td>
+            <td>Debit</td>
+            <td>−$142.18</td>
+            <td>$8,950.75</td>
+            <td>****4821</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260706-003">TXN-20260706-003</data></td>
+            <td><time datetime="2026-07-06T11:00:00">Jul 6, 2026 11:00 AM</time></td>
+            <td>Transfer to Savings</td>
+            <td>Transfer</td>
+            <td>Debit</td>
+            <td>−$1,000.00</td>
+            <td>$9,092.93</td>
+            <td>****4821</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260706-004">TXN-20260706-004</data></td>
+            <td><time datetime="2026-07-06T11:00:00">Jul 6, 2026 11:00 AM</time></td>
+            <td>Transfer from Checking</td>
+            <td>Transfer</td>
+            <td>Credit</td>
+            <td>+$1,000.00</td>
+            <td>$45,200.00</td>
+            <td>****7392</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260705-005">TXN-20260705-005</data></td>
+            <td><time datetime="2026-07-05T18:45:00">Jul 5, 2026 6:45 PM</time></td>
+            <td>Grocery Market</td>
+            <td>Food</td>
+            <td>Debit</td>
+            <td>−$87.43</td>
+            <td>$10,092.93</td>
+            <td>****4821</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260704-006">TXN-20260704-006</data></td>
+            <td><time datetime="2026-07-04T00:01:00">Jul 4, 2026 12:01 AM</time></td>
+            <td>Monthly Interest Credit</td>
+            <td>Interest</td>
+            <td>Credit</td>
+            <td>+$18.92</td>
+            <td>$44,200.00</td>
+            <td>****7392</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260701-007">TXN-20260701-007</data></td>
+            <td><time datetime="2026-07-01T10:00:00">Jul 1, 2026 10:00 AM</time></td>
+            <td>Office Supplies Co.</td>
+            <td>Business</td>
+            <td>Debit</td>
+            <td>−$245.60</td>
+            <td>$28,750.30</td>
+            <td>****1056</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260628-008">TXN-20260628-008</data></td>
+            <td><time datetime="2026-06-28T16:20:00">Jun 28, 2026 4:20 PM</time></td>
+            <td>Online Retail Purchase</td>
+            <td>Shopping</td>
+            <td>Debit</td>
+            <td>−$129.99</td>
+            <td>$10,180.36</td>
+            <td>****4821</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260615-009">TXN-20260615-009</data></td>
+            <td><time datetime="2026-06-15T09:00:00">Jun 15, 2026 9:00 AM</time></td>
+            <td>Direct Deposit — Acme Corp</td>
+            <td>Income</td>
+            <td>Credit</td>
+            <td>+$3,500.00</td>
+            <td>$10,310.35</td>
+            <td>****4821</td>
+          </tr>
+          <tr>
+            <td><data value="TXN-20260610-010">TXN-20260610-010</data></td>
+            <td><time datetime="2026-06-10T13:15:00">Jun 10, 2026 1:15 PM</time></td>
+            <td>Client Payment Received</td>
+            <td>Business Income</td>
+            <td>Credit</td>
+            <td>+$2,800.00</td>
+            <td>$28,995.90</td>
+            <td>****1056</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="export-heading">
+      <h2 id="export-heading">Export Options</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Download Statement</legend>
+          <p>
+            <label for="export-format">File Format</label><br>
+            <select id="export-format" name="format">
+              <option value="csv">CSV (Comma-Separated Values)</option>
+              <option value="pdf">PDF Document</option>
+              <option value="ofx">OFX (Open Financial Exchange)</option>
+            </select>
+          </p>
+          <p>
+            <label for="export-month">Statement Period</label><br>
+            <input type="month" id="export-month" name="month" value="2026-06">
+          </p>
+          <p>
+            <button type="submit">Request Export</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>HTML Banking System &copy; <time datetime="2026">2026</time> Muhammad Shawsawar</small></p>
+    <address>
+      Contact: <a href="mailto:muhammad@roboticela.com">muhammad@roboticela.com</a>
+    </address>
+    <p><a href="../index.html">Return to Dashboard</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure login to access your HTML Banking System account.">
+  <title>Login — HTML Banking System</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <h1>HTML Banking System</h1>
+    <p>Secure Login</p>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="../index.html">Dashboard</a></li>
+        <li><a href="accounts.html">Accounts</a></li>
+        <li><a href="transactions.html">Transactions</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="credit-cards.html">Credit Cards</a></li>
+        <li><a href="transfers.html">Transfers</a></li>
+        <li><a href="login.html" aria-current="page">Login</a></li>
+        <li><a href="register.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="login-heading">
+      <h2 id="login-heading">Sign In to Your Account</h2>
+      <p>Enter your credentials to access your banking dashboard.</p>
+
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Login Credentials</legend>
+          <p>
+            <label for="username">Username or Email</label><br>
+            <input type="text" id="username" name="username" autocomplete="username" required placeholder="your.email@example.com">
+          </p>
+          <p>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" autocomplete="current-password" required minlength="8" placeholder="Enter your password">
+          </p>
+          <p>
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember this device</label>
+          </p>
+          <p>
+            <button type="submit">Sign In</button>
+            <button type="reset">Clear</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <section aria-labelledby="forgot-heading">
+      <h2 id="forgot-heading">Forgot Your Credentials?</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Password Recovery</legend>
+          <p>
+            <label for="recovery-email">Email Address</label><br>
+            <input type="email" id="recovery-email" name="email" autocomplete="email" required placeholder="your.email@example.com">
+          </p>
+          <p>
+            <label for="recovery-account">Last Four Digits of Account</label><br>
+            <input type="text" id="recovery-account" name="account-last4" pattern="[0-9]{4}" maxlength="4" required placeholder="4821">
+          </p>
+          <p>
+            <button type="submit">Send Recovery Link</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <section aria-labelledby="security-heading">
+      <h2 id="security-heading">Security Tips</h2>
+      <ul>
+        <li>Never share your password or security codes with anyone.</li>
+        <li>Always verify you are on the official banking website before logging in.</li>
+        <li>Use a strong, unique password with at least 12 characters.</li>
+        <li>Log out when finished, especially on shared computers.</li>
+        <li>Report suspicious activity immediately via <a href="contact.html">Contact Support</a>.</li>
+      </ul>
+    </section>
+
+    <aside aria-labelledby="register-prompt-heading">
+      <h2 id="register-prompt-heading">New Customer?</h2>
+      <p>
+        Create an account to access online banking features including account management,
+        transfers, and loan applications.
+      </p>
+      <p><a href="register.html">Register for Online Banking</a></p>
+    </aside>
+  </main>
+
+  <footer>
+    <p><small>HTML Banking System &copy; <time datetime="2026">2026</time> Muhammad Shawsawar</small></p>
+    <address>
+      Contact: <a href="mailto:muhammad@roboticela.com">muhammad@roboticela.com</a>
+    </address>
+    <p><a href="../index.html">Return to Dashboard</a></p>
+  </footer>
+</body>
+</html>

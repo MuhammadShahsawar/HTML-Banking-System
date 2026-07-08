@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage credit cards, view balances, statements, and apply for new cards.">
+  <title>Credit Cards — HTML Banking System</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <h1>HTML Banking System</h1>
+    <p>Credit Card Management</p>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="../index.html">Dashboard</a></li>
+        <li><a href="accounts.html">Accounts</a></li>
+        <li><a href="transactions.html">Transactions</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="credit-cards.html" aria-current="page">Credit Cards</a></li>
+        <li><a href="transfers.html">Transfers</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="cards-heading">
+      <h2 id="cards-heading">Your Credit Cards</h2>
+      <p>View card details, balances, and payment due dates.</p>
+
+      <article aria-labelledby="platinum-heading">
+        <h3 id="platinum-heading">Platinum Rewards Card</h3>
+        <dl>
+          <dt>Card Number</dt>
+          <dd><data value="****8834">**** **** **** 8834</data></dd>
+          <dt>Cardholder Name</dt>
+          <dd>Muhammad Shawsawar</dd>
+          <dt>Expiration Date</dt>
+          <dd><time datetime="2028-09">09/2028</time></dd>
+          <dt>Credit Limit</dt>
+          <dd><data value="15000.00">$15,000.00</data></dd>
+          <dt>Available Credit</dt>
+          <dd><data value="11240.55">$11,240.55</data></dd>
+          <dt>Current Balance</dt>
+          <dd><data value="3759.45">$3,759.45</data></dd>
+          <dt>Minimum Payment Due</dt>
+          <dd><data value="75.00">$75.00</data></dd>
+          <dt>Payment Due Date</dt>
+          <dd><time datetime="2026-07-25">July 25, 2026</time></dd>
+          <dt>Rewards Points</dt>
+          <dd><data value="24580">24,580 points</data></dd>
+          <dt>Status</dt>
+          <dd>Active</dd>
+        </dl>
+      </article>
+
+      <article aria-labelledby="business-card-heading">
+        <h3 id="business-card-heading">Business Cashback Card</h3>
+        <dl>
+          <dt>Card Number</dt>
+          <dd><data value="****5512">**** **** **** 5512</data></dd>
+          <dt>Cardholder Name</dt>
+          <dd>Muhammad Shawsawar</dd>
+          <dt>Expiration Date</dt>
+          <dd><time datetime="2027-04">04/2027</time></dd>
+          <dt>Credit Limit</dt>
+          <dd><data value="25000.00">$25,000.00</data></dd>
+          <dt>Available Credit</dt>
+          <dd><data value="21890.12">$21,890.12</data></dd>
+          <dt>Current Balance</dt>
+          <dd><data value="3109.88">$3,109.88</data></dd>
+          <dt>Minimum Payment Due</dt>
+          <dd><data value="62.00">$62.00</data></dd>
+          <dt>Payment Due Date</dt>
+          <dd><time datetime="2026-07-28">July 28, 2026</time></dd>
+          <dt>Cashback Earned (YTD)</dt>
+          <dd><data value="412.35">$412.35</data></dd>
+          <dt>Status</dt>
+          <dd>Active</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section aria-labelledby="card-transactions-heading">
+      <h2 id="card-transactions-heading">Recent Card Transactions</h2>
+      <table>
+        <caption>Last transactions on Platinum Rewards Card</caption>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Merchant</th>
+            <th scope="col">Category</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><time datetime="2026-07-07">Jul 7, 2026</time></td>
+            <td>Tech Electronics Store</td>
+            <td>Electronics</td>
+            <td>$459.99</td>
+            <td>****8834</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-05">Jul 5, 2026</time></td>
+            <td>City Restaurant Group</td>
+            <td>Dining</td>
+            <td>$86.50</td>
+            <td>****8834</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-03">Jul 3, 2026</time></td>
+            <td>Cloud Services Inc.</td>
+            <td>Business</td>
+            <td>$199.00</td>
+            <td>****5512</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-01">Jul 1, 2026</time></td>
+            <td>Streaming Platform</td>
+            <td>Entertainment</td>
+            <td>$15.99</td>
+            <td>****8834</td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-06-28">Jun 28, 2026</time></td>
+            <td>Office Depot</td>
+            <td>Office Supplies</td>
+            <td>$127.45</td>
+            <td>****5512</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="payment-heading">
+      <h2 id="payment-heading">Make a Card Payment</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Credit Card Payment</legend>
+          <p>
+            <label for="payment-card">Select Card</label><br>
+            <select id="payment-card" name="card" required>
+              <option value="8834">Platinum Rewards ****8834 — Balance: $3,759.45</option>
+              <option value="5512">Business Cashback ****5512 — Balance: $3,109.88</option>
+            </select>
+          </p>
+          <p>
+            <label for="payment-amount">Payment Amount</label><br>
+            <input type="number" id="payment-amount" name="amount" min="1" step="0.01" placeholder="75.00" required>
+          </p>
+          <p>
+            <label>Payment Type</label><br>
+            <input type="radio" id="pay-minimum" name="payment-type" value="minimum" checked>
+            <label for="pay-minimum">Minimum Payment</label><br>
+            <input type="radio" id="pay-statement" name="payment-type" value="statement">
+            <label for="pay-statement">Statement Balance</label><br>
+            <input type="radio" id="pay-custom" name="payment-type" value="custom">
+            <label for="pay-custom">Custom Amount</label>
+          </p>
+          <p>
+            <label for="payment-from">Pay From Account</label><br>
+            <select id="payment-from" name="from-account" required>
+              <option value="4821">Checking ****4821</option>
+              <option value="7392">Savings ****7392</option>
+            </select>
+          </p>
+          <p>
+            <label for="payment-date">Payment Date</label><br>
+            <input type="date" id="payment-date" name="date" value="2026-07-08" required>
+          </p>
+          <p>
+            <button type="submit">Submit Payment</button>
+            <button type="reset">Clear Form</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <section aria-labelledby="apply-card-heading">
+      <h2 id="apply-card-heading">Apply for a New Credit Card</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Credit Card Application</legend>
+          <p>
+            <label for="card-product">Card Product</label><br>
+            <select id="card-product" name="product" required>
+              <option value="">Select a card</option>
+              <option value="platinum">Platinum Rewards — 2x points on all purchases</option>
+              <option value="cashback">Cashback Essentials — 1.5% on every purchase</option>
+              <option value="business">Business Cashback — 2% on business expenses</option>
+              <option value="secured">Secured Builder — Build credit with deposit</option>
+            </select>
+          </p>
+          <p>
+            <label for="requested-limit">Requested Credit Limit</label><br>
+            <input type="number" id="requested-limit" name="limit" min="500" max="50000" step="500" placeholder="5000">
+          </p>
+          <p>
+            <input type="checkbox" id="card-terms" name="terms" required>
+            <label for="card-terms">I agree to the cardholder agreement and authorize a credit inquiry</label>
+          </p>
+          <p>
+            <button type="submit">Apply Now</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>HTML Banking System &copy; <time datetime="2026">2026</time> Muhammad Shawsawar</small></p>
+    <address>
+      Contact: <a href="mailto:muhammad@roboticela.com">muhammad@roboticela.com</a>
+    </address>
+    <p><a href="../index.html">Return to Dashboard</a></p>
+  </footer>
+</body>
+</html>
